@@ -1,0 +1,202 @@
+/*General*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900');
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url(../fonts/MaterialIcons-Regular.html) format('woff2'),
+	url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+	url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+body {
+	background-color: #f8f9fa;
+	color: #272b41;
+    font-family: "Poppins",sans-serif;
+	font-size: 0.9375rem;
+    height: 100%;
+	overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #272b41;
+	font-weight: 500;
+}
+.h1, h1 {
+    font-size: 2.25rem;
+}
+.h2, h2 {
+    font-size: 1.875rem;
+}
+.h3, h3 {
+    font-size: 1.5rem;
+}
+.h4, h4 {
+    font-size: 1.125rem;
+}
+.h5, h5 {
+    font-size: 1.2rem;
+	color: #fff;
+}
+.h6, h6 {
+    font-size: 0.875rem;
+}
+a {
+    color: #2E3842;
+}
+a:hover {
+	color: #09dca4;
+}
+a:hover,
+a:active,
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+-webkit-box-align: 0 0 0px 1000px white inset !important;
+}
+/*Header*/
+.logo {
+    display: inline-block;
+    margin-right: 30px;
+    width: 200px;
+}
+/*Search*/
+.breadcrumb-bar {
+    background-color: #0275d8;
+    padding: 15px 0;
+}
+.breadcrumb-bar .breadcrumb-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 5px 0 0;
+}
+.page-breadcrumb ol {
+    background-color: transparent;
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 0;
+}
+/*Doctor Dashboard*/
+.circle-bar {
+    margin-right: 15px;
+}
+.circle-bar > div {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+}
+.circle-bar > div img {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+.circle-bar > div canvas {
+	width: 90px !important;
+	height: 90px !important;
+}
+/*Patient Dashboard*/
+.dashboard-menu ul {
+    color: #757575;
+    font-size: 14px;
+    line-height: 17px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+.dashboard-menu > ul > li {
+	border-bottom:1px solid #f0f0f0;
+	position: relative;
+}
+.dashboard-menu > ul > li:last-child {
+	border-bottom: 0;
+}
+.dashboard-menu ul li a span,
+.dashboard-menu ul li a i {
+	display: inline-block;
+	vertical-align: middle;
+}
+.dashboard-menu > ul > li > a {
+	color: #757575;
+	display: block;
+	padding: 16px 20px;
+}
+.dashboard-menu > ul > li:hover > a
+{
+	color:#0de0fe;
+}
+.dashboard-menu ul li a i {
+    font-size: 16px;
+    margin-right: 10px;
+    width: 16px;
+}
+/*Appoitment List*/
+.widget-profile .profile-info-widget .booking-doc-img img {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+.cards {
+    width: 100%;
+	height: 500px;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+	font-size: 30px;
+}
+.cards .card {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.card:hover .nana {
+	color:#0de0fe;
+}
+.textarea {
+	background-color: #dddddd;
+	color: #666666;
+	padding: 1em;
+	border-radius: 50px;
+	border: 10px solid transparent;
+	outline: none;
+	font-family: sans-serif;
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 1.4;
+	width: 800px;
+	height: 400px;
+}
+.button {
+	position: relative;
+	text-align: center;
+	width: 150px;
+	padding: 15px;
+	font-size: 30px;
+	color:#15558d;
+	font-family: sans-serif;
+	font-weight: 400;
+	border: 5px solid #15558d;
+	text-transform: uppercase;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+}

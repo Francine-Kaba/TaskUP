@@ -1,0 +1,82 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.min.css' %}">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link href="{% static '/images/acl.png' %}" rel="icon">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+</head>
+<body> 
+  <div class="container">
+    <div class="topbar">
+      <div class="logo">
+        <h2>Admin</h2>
+      </div>
+      <div class="search">
+        <input type="text" id="search" placeholder="search here">
+        <label for="search"><i class='fa fa-search'></i></label>
+      </div>
+      <i class="fas fa-bell"></i>
+    </div>
+    <div class="main-content">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="{% url 'embedded_app:admin' %}">
+              <i class="fas fa-th-large"></i>
+              <div>DASHBOARD</div>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'embedded_app:admin_doc' %}">
+              <i class="fas fa-user-doctor"></i>
+              <div>DOCTORS</div>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'embedded_app:admin_messages' %}">
+              <i class="fas fa-message"></i>
+              <div>MESSAGES</div>
+            </a>
+          </li>
+          <li class="active">
+            <a href="{% url 'embedded_app:admin_analytics' %}">
+              <i class="fas fa-chart-bar"></i>
+              <div>ANALYTICS</div>
+            </a>
+          </li>
+      </div>
+      
+        <div class="charts analytics">
+          <a href="analytics.html">
+            <div class="chart">
+             <h2>Appointments(past 6 months)</h2>
+             <canvas id="lineChart"></canvas>
+            </div>
+            <div class="chart" id="doughnut-chart">
+              <h2>Patients' Attendance</h2>
+              <canvas id="doughnut" class="analytics"></canvas>
+            </div>
+          </a> 
+      </div>
+    </div>
+  </div>    
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  <script src="{% static 'js/chart1.js' %}"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
